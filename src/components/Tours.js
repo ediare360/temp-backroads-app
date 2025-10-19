@@ -26,11 +26,7 @@ const Tours = () => {
                 <div className="tour-title">
                   <h4>{title}</h4>
                 </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Cumque vitae tempore voluptatum maxime reprehenderit eum quod
-                  exercitationem fugit, qui corporis.
-                </p>
+                <p>{info}</p>
                 <div className="tour-footer">
                   <p>
                     <span>
