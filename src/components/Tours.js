@@ -1,0 +1,53 @@
+import React from "react";
+
+import { tours } from "../data";
+
+const Tours = () => {
+  return (
+    <section className="section" id="tours">
+      <div className="section-title">
+        <h2>
+          featured <span>tours</span>
+        </h2>
+      </div>
+
+      <div className="section-center featured-center">
+        {tours.map((tour) => {
+          const { id, Image, data, title, info, location, duration, cost } =
+            tour;
+
+          return (
+            <article className="tour-card" key={id}>
+              <div className="tour-img-container">
+                <img src={Image} className="tour-img" alt={title} />
+                <p className="tour-date">{data}</p>
+              </div>
+              <div className="tour-info">
+                <div className="tour-title">
+                  <h4>{title}</h4>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Cumque vitae tempore voluptatum maxime reprehenderit eum quod
+                  exercitationem fugit, qui corporis.
+                </p>
+                <div className="tour-footer">
+                  <p>
+                    <span>
+                      <i className="fas fa-map"></i>
+                    </span>{" "}
+                    {location}
+                  </p>
+                  <p>{duration}</p>
+                  <p>from {cost}</p>
+                </div>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+  );
+};
+
+export default Tours;
